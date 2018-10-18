@@ -35,33 +35,36 @@
     (message "Aborting")))
 
 (elpy-enable)
-
+;; For elpy
+(setq elpy-rpc-python-command "python3")
+;; For interactive shell
+(setq python-shell-interpreter "python3")
 ;; evil-mode
 
-;; (require 'evil)
-;; ;; (require 'evil-leader)
-;; ;; (global-evil-leader-mode)
-;; ;; (evil-leader/set-leader "<SPC>")
-;; ;; (evil-leader/set-key
-;; ;;  "xr" 'helm-recentf
-;; ;;  "xf" 'helm-find-files
-;; ;;  "xb" 'helm-buffers-list
-;; ;;  "w" 'save-buffer
-;; ;;  "xs" 'save-buffer
-;; ;;  "g" 'keyboard-quit
-;; ;;  "xo" 'other-window
-;; ;;  "x0" 'delete-window
-;; ;;  "x1" 'delete-other-windows
-;; ;;  "xk" 'kill-buffer)
-;; ;; (evil-mode t)
-;; (global-set-key (kbd "<f1>") 'evil-mode)
-;; (evil-set-initial-state 'ibuffer-mode 'normal)
-;; (evil-set-initial-state 'bookmark-bmenu-mode 'normal)
-;; (evil-set-initial-state 'dired-mode 'emacs)
-;; (evil-set-initial-state 'sunrise-mode 'emacs)
-;; (evil-set-initial-state 'org-mode 'emacs)
-;; (require 'evil-surround)
-;; (global-evil-surround-mode 1)
+(require 'evil)
+;; (require 'evil-leader)
+;; (global-evil-leader-mode)
+;; (evil-leader/set-leader "<SPC>")
+;; (evil-leader/set-key
+;;  "xr" 'helm-recentf
+;;  "xf" 'helm-find-files
+;;  "xb" 'helm-buffers-list
+;;  "w" 'save-buffer
+;;  "xs" 'save-buffer
+;;  "g" 'keyboard-quit
+;;  "xo" 'other-window
+;;  "x0" 'delete-window
+;;  "x1" 'delete-other-windows
+;;  "xk" 'kill-buffer)
+(evil-mode t)
+(global-set-key (kbd "<f1>") 'evil-mode)
+(evil-set-initial-state 'ibuffer-mode 'normal)
+(evil-set-initial-state 'bookmark-bmenu-mode 'normal)
+(evil-set-initial-state 'dired-mode 'emacs)
+(evil-set-initial-state 'sunrise-mode 'emacs)
+(evil-set-initial-state 'org-mode 'emacs)
+(require 'evil-surround)
+(global-evil-surround-mode 1)
 ;; ;;(add-hook 'emacs-lisp-mode-hook 'evil-paredit-mode)
 
 ;; company
@@ -147,6 +150,7 @@
  '(custom-safe-themes
    (quote
     ("e03d2f414fb109f3920752b10b92323697174f49d577da9e69979edbb147a921" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" "3b5ce826b9c9f455b7c4c8bff22c020779383a12f2f57bf2eb25139244bb7290" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "5e52ce58f51827619d27131be3e3936593c9c7f9f9f9d6b33227be6331bf9881" "cdfc5c44f19211cfff5994221078d7d5549eeb9feda4f595a2fd8ca40467776c" default)))
+ '(elpy-rpc-python-command "python3")
  '(fci-rule-color "#383838" t)
  '(nrepl-message-colors
    (quote
@@ -156,6 +160,7 @@
    (quote
     (elpy minimal-theme ac-clang yasnippet auto-complete-clang-async magit ess zenburn-theme paredit ox-tufte ox-reveal ox-pandoc ox-html5slide ox-asciidoc monitor ido-vertical-mode github-theme flycheck-irony epc discover company-rtags company-irony-c-headers company-irony cmake-ide borland-blue-theme auctex adoc-mode ac-slime)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
+ '(python-shell-interpreter "/usr/bin/python3")
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-annotate-background "#2B2B2B")
@@ -210,4 +215,3 @@
  '(font-lock-type-face ((t nil)))
  '(font-lock-warning-face ((t (:inherit italic)))))
 (put 'downcase-region 'disabled nil)
-

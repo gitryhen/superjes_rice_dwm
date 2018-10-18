@@ -50,7 +50,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/home/henry:/home/henry/.vim/bundle/vim-live-latex-preview/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/home/henry:/home/henry/.vim/bundle/vim-live-latex-preview/bin:/home/henry/.local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -87,6 +87,7 @@ stty -ixon #disable CTRL-s and CTRL-q
 alias em="/home/henry/.local/bin/emacsclient -c -nw"
 alias ema="/home/henry/.local/bin/emacsclient -c -nw -q"
 alias emacs="/home/henry/.local/bin/emacs"
+##alias emacs="/usr/bin/emacs"
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias ls='ls --group-directories-first -h --color=auto'
 # export RANGER_LOAD_DEFAULT_RC=FALSE
